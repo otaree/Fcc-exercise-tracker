@@ -1,0 +1,19 @@
+{
+  "name": "exercise_tracker",
+  "version": "1.0.0",
+  "description": "A simple API for tracking exercise ",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server/server.js"
+  },
+  "author": "otaree",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "dotenv": "^5.0.1",
+    "express": "^4.16.3",
+    "lodash": "^4.17.10",
+    "moment": "^2.22.1",
+    "mongoose": "^5.1.3"
+  }
+}

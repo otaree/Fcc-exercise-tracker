@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Exercise tracker</title>
+</head>
+
+<body>
+    <h1 style="text-align: center;">Exercise tracker</h1>
+    <div style="display: flex; justify-content: space-evenly;">
+        <div style="padding: 2%; background: lightgreen; border-radius: 3px; margin-left: 2%;">
+            <h2>Create a New User</h2>
+            <code style="background: white; font-size: 16px; padding: 3px;">POST /api/exercise/new-user</code>
+            <form method="POST" action="/api/exercise/new-user" style="margin-top: 2px;">
+                <div style="margin: 2% 0;">
+                    <input style="width: 100%;height: 30px; padding: 1%; border-radius: 3px; outline: none; border: thin solid #eee" type="text"
+                        placeholder="username*" name="username" required />
+                </div>
+                <button style="width: 100%; margin: 1% 0; height: 30px; border: thin solid #999; border-radius: 3px;">Submit</button>
+            </form>
+        </div>
+        <div style="padding: 2%; background: lightgreen; border-radius: 3px;">
+            <h2>Add exercises</h2>
+            <code style="background: white; font-size: 16px; padding: 3px;">POST /api/exercise/add</code>
+            <form style="margin-top: 2px;" method="POST" action="/api/exercise/add">
+                <div style="margin: 2% 0;">
+                    <input style="width: 100%;height: 30px; padding: 1%; border-radius: 3px; outline: none; border: thin solid #eee" type="text"
+                        placeholder="userId*" name="user" required />
+                </div>
+                <div style="margin: 2% 0;">
+                    <input style="width: 100%;height: 30px; padding: 1%; border-radius: 3px; outline: none; border: thin solid #eee" type="text"
+                        placeholder="description*" name="description" required />
+
+                </div>
+                <div style="margin: 2% 0;">
+                    <input style="width: 100%;height: 30px; padding: 1%; border-radius: 3px; outline: none; border: thin solid #eee" type="number"
+                        placeholder="duration* (mins)" name="duration" required />
+
+                </div>
+                <div>
+                    <input style="width: 100%;height: 30px; padding: 1%; border-radius: 3px; outline: none; border: thin solid #eee" type="text"
+                        placeholder="date* (yyyy-mm-dd)" name="date" required />
+
+                </div>
+                <button style="width: 100%; margin: 1% 0; height: 30px; border: thin solid #999; border-radius: 3px;">Submit</button>
+            </form>
+        </div>
+    </div>
+    <div style="background: #ccc; width: 45%; margin-top: 2%; padding: 2%;">
+        <p>GET users's exercise log:
+            <code style="background: white; font-size: 16px; padding: 3px;">GET /api/exercise/log?{userId}[&from][&to][&limit]</code>
+        </p>
+        <p>{ } = required, [ ] = optional</p>
+        <p>from, to = dates (yyyy-mm-dd); limit = number</p>
+    </div>
+</body>
+
+</html>
